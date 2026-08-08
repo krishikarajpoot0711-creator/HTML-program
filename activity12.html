@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Donation Form</title>
+</head>
+<body>
+
+    <h1>Book Donation</h1>
+    <p>Please fill out this form to submit your book donation details.</p>
+    <hr>
+
+    <form>
+        <!-- Step 2: Donor Details Fieldset -->
+        <fieldset>
+            <legend>Donor Details</legend>
+            <p>
+                <label for="donor-name">Donor Name:</label>
+                <input type="text" id="donor-name" name="donorName">
+            </p>
+            <p>
+                <label for="donor-id">Donor ID:</label>
+                <input type="password" id="donor-id" name="donorID">
+            </p>
+            <p>
+                <label for="donation-date">Donation Date:</label>
+                <input type="date" id="donation-date" name="donationDate">
+            </p>
+        </fieldset>
+
+        <!-- Step 3, 4, 5: Book Details Fieldset -->
+        <fieldset>
+            <legend>Book Details</legend>
+            
+            <!-- Step 3: Select Menu -->
+            <p>
+                <label for="book-category">Book Category:</label>
+                <select id="book-category" name="bookCategory">
+                    <option value="">Select a category</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="education">Education</option>
+                </select>
+            </p>
+
+            <!-- Step 4: Radio Buttons -->
+            <p>
+                <label>Book Condition:</label><br>
+                <input type="radio" id="condition-new" name="condition" value="new">
+                <label for="condition-new">Like New</label><br>
+                
+                <input type="radio" id="condition-good" name="condition" value="good">
+                <label for="condition-good">Good</label><br>
+                
+                <input type="radio" id="condition-used" name="condition" value="used">
+                <label for="condition-used">Used</label>
+            </p>
+
+            <!-- Step 5: Textarea -->
+            <p>
+                <label for="notes">Notes:</label><br>
+                <textarea id="notes" name="notes" placeholder="Enter book title, author name, or an extra note..."></textarea>
+            </p>
+        </fieldset>
+
+        <!-- Step 6: Preferred Drop-Off Days Fieldset -->
+        <fieldset>
+            <legend>Preferred Drop-Off Day</legend>
+            <p>
+                <input type="checkbox" id="day-monday" name="dropoffDays" value="monday">
+                <label for="day-monday">Monday</label><br>
+                
+                <input type="checkbox" id="day-wednesday" name="dropoffDays" value="wednesday">
+                <label for="day-wednesday">Wednesday</label><br>
+                
+                <input type="checkbox" id="day-friday" name="dropoffDays" value="friday">
+                <label for="day-friday">Friday</label>
+            </p>
+        </fieldset>
+
+        <!-- Step 7: Submit Button -->
+        <p>
+            <input type="submit" value="Donate My Book">
+        </p>
+    </form>
+
+</body>
+</html>

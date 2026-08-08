@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Profile Card</title>
+    <!-- Internal CSS -->
+    <style>
+        /* Universal Selector */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selectors */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2563eb;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        /* ID Selector for the unique card */
+        #cartoon-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 3px solid #2563eb;
+        }
+
+        /* Class Selector for repeated details */
+        .cartoon-detail {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        /* Extra styling for text weight properties */
+        .detail-label {
+            font-weight: bold;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title -->
+    <h1>My Favourite Cartoon Character</h1>
+
+    <!-- Introduction Sentence using Inline CSS -->
+    <p style="font-size: 1.2rem; color: #4b5563; text-align: center; max-width: 600px; margin-bottom: 20px;">
+        Welcome to my profile card dedicated to one of the most iconic and beloved characters in animation history.
+    </p>
+
+    <!-- Card Section -->
+    <div id="cartoon-card">
+        <h2>Character Profile</h2>
+        
+        <!-- Character Details using Class Selector -->
+        <p class="cartoon-detail"><span class="detail-label">Name:</span> SpongeBob SquarePants</p>
+        <p class="cartoon-detail"><span class="detail-label">Show:</span> SpongeBob SquarePants</p>
+        <p class="cartoon-detail"><span class="detail-label">Occupation:</span> Fry Cook at the Krusty Krab</p>
+        <p class="cartoon-detail"><span class="detail-label">Home:</span> A Pineapple Under the Sea</p>
+        
+        <h2>Why I Like Them</h2>
+        <!-- Short reasons explaining why the character is liked -->
+        <p class="cartoon-detail">
+            I love SpongeBob because of his boundless optimism, infectious laughter, and unwavering loyalty to his friends. No matter what challenges he faces in Bikini Bottom, he always approaches life with absolute joy and determination.
+        </p>
+    </div>
+
+</body>
+</html>

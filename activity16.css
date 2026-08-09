@@ -1,0 +1,32 @@
+body {
+    background-color: cyan;
+    background-image: linear gradient(to bottom, darkblue, navy);
+    background-repeat: no-repeat;
+    background-position: top-center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.page-header {
+    background-image: linear-gradient(to right, purple, pink);
+    border-radius: 16px;
+    text-align: center;
+    color: black;
+}
+
+.fact-card {
+    background-color: midnightblue;
+    border-radius: 12px;
+    color: beige;
+}
+
+.fact-card h2 {
+    color:bisque;
+}
+
+.star {
+    width: 60px;
+    height: 60px;
+    background-color:yellow;
+    border-radius: 50%;
+    animation: twinkle 2s infinite alternate;
+}

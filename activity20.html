@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-container">
+        
+        <h1 class="menu-title">My Food Menu</h1>
+        
+        
+        <p class="intro-text">
+            Welcome to a burst of fresh flavors! Our dishes are crafted daily with premium ingredients, passion, and a dash of culinary magic.
+        </p>
+        
+       
+        <ul class="menu-list">
+            <li>🌶️ Sizzling Garlic Butter Shrimp</li>
+            <li class="pre-special">🍟 Crispy Truffle Parmesan Fries</li>
+            <!-- The next item is targeted using the adjacent sibling selector (+) -->
+            <li>👑 Smoked BBQ Brisket Platter (Chef's Special)</li>
+            <li>🍝 Creamy Tuscan Chicken Pasta</li>
+            <li>🍰 Decadent Lava Chocolate Cake</li>
+        </ul>
+        
+        <p class="detailed-desc">
+            Every bite tells a story of tradition mixed with modern flair. Experience an unforgettable dining journey designed to delight your senses and satisfy your deepest cravings.
+        </p>
+        
+       
+        <div class="button-group">
+            <button class="glow-btn primary-btn">Order Now</button>
+            <button class="glow-btn secondary-btn">View Full Menu</button>
+        </div>
+    </div>
+
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0b081d 0%, #100052 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.menu-container {
+    background: rgba(180, 87, 87, 0.03);
+    border: 1px solid rgba(185, 97, 97, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 550px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+
+.menu-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #6f03da, #b00f0f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.intro-text {
+    color: #ff9f43;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+
+.menu-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.menu-list li {
+    color: #bf207f;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    transition: transform 0.2s ease;
+}
+
+
+.pre-special + li {
+    background: linear-gradient(90deg, #f30d43 0%, #a82f71 100%);
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #ffbe0b;
+    box-shadow: 0 0 15px rgba(255, 75, 43, 0.4);
+    transform: scale(1.03);
+}
+
+
+.detailed-desc::first-letter {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #520eb7;
+    float: left;
+    margin-right: 8px;
+    line-height: 0.85;
+}
+
+.detailed-desc {
+    color: #214eb9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 30px;
+    clear: both;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.glow-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.primary-btn {
+    background: #c500ab;
+    color: white;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #ac4431, 0 0 40px rgba(255, 75, 43, 0.6);
+}
+
+
+.secondary-btn {
+    background: transparent;
+    color: #00d2d3;
+    border: 2px solid #00d2d3;
+}
+
+.secondary-btn:hover {
+    background: #00d2d3;
+    color: #15102a;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00d2d3, 0 0 40px rgba(0, 210, 211, 0.6);
+}
+
+    </style>
+</body>
+</html>

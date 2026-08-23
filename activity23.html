@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Fork Menu</title>
+    <style>
+        
+        body {
+            background-color: #f5f5f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        
+        .menu-card {
+            background-color: #d6d5cd;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            border: 1px solid #e0e0d1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            text-align: center;
+            position: relative;
+        }
+
+        
+        .restaurant-name {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+            margin-bottom: 5px;
+            color: #2c2c2c;
+        }
+
+    
+        .tagline {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-decoration: underline; 
+            color: #777777;
+            margin-bottom: 40px;
+        }
+
+        
+        .menu-section {
+            margin-bottom: 35px;
+            padding: 15px;
+            background-color: #fffcf7;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); 
+        }
+
+
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            text-decoration: overline; 
+            color: #8b6508;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        
+        .dish-name {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: capitalize; 
+            color: #333333;
+            margin: 0 0 5px 0;
+            display: inline-block;
+            transition: transform 0.3s ease; 
+        }
+
+        
+        .dish-name:hover {
+            transform: scale(1.1); 
+        }
+
+        
+        .dish-description {
+            font-family: 'Arial', sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            color: #666666;
+            margin: 0;
+            text-indent: 20px; 
+            line-height: 1.4;
+        }
+
+        
+        .special-offer {
+            background-color: #cf1d31;
+            color: white;
+            padding: 12px;
+            font-family: 'Georgia', serif;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+            transform: rotate(-2deg); 
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="menu-card">
+        
+        <h1 class="restaurant-name">The Golden Fork</h1>
+        <p class="tagline">Fine dining, finer moments</p>
+
+        
+        <div class="menu-section">
+            <h2 class="section-title">appetizers</h2>
+            
+            <div class="menu-item">
+                <h3 class="dish-name">truffle garlic knots</h3>
+                <p class="dish-description">Freshly baked dough tied into knots, brushed with white truffle oil, minced garlic, and sprinkled with fresh parmesan herb mix.</p>
+            </div>
+
+            <div class="menu-item">
+                <h3 class="dish-name">stuffed mushrooms</h3>
+                <p class="dish-description">Plump mushroom caps loaded with a savory blend of cream cheese, spinach, and Italian sausage, baked until golden brown.</p>
+            </div>
+        </div>
+
+        
+        <div class="menu-section">
+            <h2 class="section-title">main courses</h2>
+            
+            <div class="menu-item">
+                <h3 class="dish-name">seared salmon filet</h3>
+                <p class="dish-description">Pan-seared Atlantic salmon served over a bed of creamy lemon-herb risotto and accompanied by grilled asparagus spears.</p>
+            </div>
+
+            <div class="menu-item">
+                <h3 class="dish-name">prime ribeye steak</h3>
+                <p class="dish-description">A perfectly seasoned 12oz ribeye steak grilled to your liking, topped with garlic butter and served with roasted baby potatoes.</p>
+            </div>
+        </div>
+
+        
+        <div class="special-offer">
+            weekend special: 20% off all desserts!
+        </div>
+
+    </div>
+
+</body>
+</html>

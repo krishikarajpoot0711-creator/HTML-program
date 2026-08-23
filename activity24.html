@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buddy the Labrador - Pet Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <div class="top-bar">Buddy the labrador's Page</div>
+
+  <div class="content-wrapper">
+    
+
+    <div class="pet-note">
+      📌 Pet of the Month: Buddy is incredibly friendly and loves treats!
+    </div>
+
+    
+    <div class="pet-card">
+      
+      <span class="badge">Adopted</span>
+      
+      <div class="card-info">
+        <h3>Meet Buddy</h3>
+        <p>Breed: Labrador Retriever</p>
+        <p>Age: 2 Years</p>
+      </div>
+    </div>
+
+    
+    <div class="sticky-section-label">Buddy's Favorite Activities</div>
+    
+    
+    <div class="scroll-content">
+      <ul>
+        <li>Playing fetch in the park</li>
+        <li>Swimming in the pool</li>
+        <li>Learning new tricks</li>
+        <li>Taking long afternoon naps</li>
+        <li>Loves to walk</li>
+        <li>Playing hide and seek</li>
+        <li>Loves solving food puzzles</li>
+      </ul>
+      <div class="spacer"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #9d57b3;
+  color: #120202;
+}
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ce689d;
+  color: rgb(76, 7, 52);
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+.content-wrapper {
+  margin-top: 80px; 
+  padding: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+{
+  position: relative;
+  left: 30px; 
+  background-color: #ffe4b5;
+  border-left: 5px solid #ff8c00;
+  padding: 12px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+
+.pet-card {
+  position: relative; 
+  background-color: rgb(143, 54, 110);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(174, 61, 159, 0.647);
+  margin-bottom: 4px;
+}
+
+
+.card-info {
+  padding: 15px;
+}
+
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px; 
+  background-color: #d51d67;
+  color: rgb(48, 2, 57);
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+
+.sticky-section-label {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 54px; 
+  background-color: #b55aa1;
+  color: rgb(75, 8, 61);
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+.scroll-content {
+  padding: 15px;
+  background-color: rgb(213, 115, 208);
+  line-height: 1.6;
+}
+
+.spacer {
+  height: 800px; 
+}
+</style>

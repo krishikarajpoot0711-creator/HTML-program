@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ice Cream Shop Menu</title>
+    <style>
+      
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff5f8; 
+            color: #5a4b41; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        
+        .menu-box {
+            background-color: #ffffff;
+            border: 4px dashed #ffb7b2;
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(255, 183, 178, 0.3);
+            text-align: center;
+        }
+
+        
+        h1 {
+            color: #ff7b90; 
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        
+        h1 + p {
+            font-style: italic;
+            color: #92a8d1; 
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        
+        .shop-description::first-letter {
+            font-size: 2.2rem;
+            color: #ff7b90;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            float: left;
+            line-height: 1;
+            padding-right: 8px;
+        }
+
+        .shop-description {
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        ul > li {
+            background-color: #f7ebec;
+            margin: 10px 0;
+            padding: 12px 20px;
+            border-radius: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        
+        ul > li:nth-child(3) {
+            background-color: #ffe5ec;
+            border: 2px solid #ff7b90;
+            position: relative;
+        }
+
+        ul > li:nth-child(3)::after {
+            content: " ✨ Today's Special!";
+            font-size: 0.85rem;
+            color: #ff7b90;
+            font-weight: bold;
+            position: absolute;
+            right: 15px;
+        }
+
+        
+        ul > li:hover {
+            transform: scale(1.03);
+            background-color: #e8f0fe; 
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #ff7b90;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 123, 144, 0.4);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #ff526e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 123, 144, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="menu-box">
+        <h1>Sweet Treats</h1>
+        <p>Welcome to our magical flavor paradise!</p>
+        
+        <p class="shop-description">
+            Every single scoop of our ice cream is crafted by hand with lots of love, organic milk, and a sprinkle of pure happiness. Come find your new favorite flavor today!
+        </p>
+
+        <ul>
+            <li>🍦 Classic Vanilla Bean</li>
+            <li>🍫 Creamy Dreamy Chocolate</li>
+            <li>🍓 Fresh Strawberry Swirl</li>
+            <li>🌱 Mint Chocolate Confetti</li>
+        </ul>
+
+        <button>Order Now</button>
+    </div>
+
+</body>
+</html>

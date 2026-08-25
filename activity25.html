@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Rescue Tracker</title>
+    <style>
+    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            padding-top: 50px; 
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        
+        .rescue-alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            line-height: 50px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .rescue-zone-label {
+            position: sticky;
+            top: 50px; 
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            z-index: 900;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        
+        .animal-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid #4caf50;
+        }
+
+        .animal-card h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        
+        .static-card {
+            position: static;
+        }
+
+        
+        .relative-card {
+            position: relative;
+            left: 35px;
+            border-left-color: #2196f3;
+            background-color: #e3f2fd;
+        }
+
+        
+        .absolute-card {
+            position: relative; 
+            border-left-color: #9c27b0;
+        }
+
+        .safe-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #4caf50;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        
+        .scroll-spacer {
+            height: 600px;
+            margin-top: 40px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #e8f5e9, #f4f7f6);
+            border-radius: 8px;
+            text-align: center;
+            color: #888;
+            border: 2px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="rescue-alert">
+         EMERGENCY ALERT: High winds expected in Sector 4. Monitor all enclosures.
+    </div>
+
+    <div class="container">
+        
+
+        <div class="rescue-zone-label">
+             Active Rescue Zone: East Wildlife Reserve
+        </div>
+
+        
+        <div class="animal-card static-card">
+            <h3>Bengal Tiger (Entry #104)</h3>
+            <p><strong>Positioning:</strong> Static (Default Flow)</p>
+            <p>Status: Routine checkup complete. Normal feeding schedule resumed in the primary enclosure.</p>
+        </div>
+
+        
+        <div class="animal-card relative-card">
+            <h3>Rescued Koala (Entry #105)</h3>
+            <p><strong>Positioning:</strong> Relative (Moved 35px to the right)</p>
+            <p>Status: Moved to medical bay unit B. Recovering well from minor wing/paw scratches.</p>
+        </div>
+
+        
+        <div class="animal-card absolute-card">
+            
+            <span class="safe-tag">Safe</span>
+            
+            <h3>Giant Panda (Entry #106)</h3>
+            <p><strong>Positioning:</strong> Absolute (The 'Safe' tag is locked to the top-right corner)</p>
+            <p>Status: Translocated successfully ahead of weather changes. Safe in the interior habitat.</p>
+        </div>
+
+
+</body>
+</html>

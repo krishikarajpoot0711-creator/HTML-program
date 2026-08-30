@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Food Diary Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        
+        <div class="menu-icon">▼</div>
+
+        
+        <p class="display-1"> MY FOOD DIARY</p>
+         <p class="display-2">My Top Dishes</p> 
+          <p class="display-3">Fun Food Facts</p>
+           <p class="display-4">Food Guide <small>by Alex</small></p>
+           
+
+    
+        <section class="card-section">
+            <h2>Did You Know?</h2>
+            <p>Pizza is the most popular food ordered by kids around the world.</p>
+            <p>It takes about 30 minutes to bake a perfect homemade pizza.</p>
+        </section>
+
+        
+        <section class="card-section">
+            <h2>Cooking Style</h2>
+            <p>My favourite way to cook with family is a good old 
+                <span class="tooltip-container">
+                    <span class="abbr-text">BBQ</span>
+                    <span class="tooltip-box">Barbecue</span>
+                </span> 
+                on a sunny day.
+            </p>
+        </section>
+
+        
+        <section class="card-section no-border">
+            <h2>Food Quote</h2>
+            <div class="quote-block">
+                <p class="quote-text">“First we eat, then we do everything else.”</p>
+                <p class="quote-author">— M.F.K. Fisher</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
+
+<style>
+
+    body {
+    background-color: #690657;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.card {
+    background-color: #f2eef1; 
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgb(76, 10, 47);
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    color: #333333;
+}
+
+
+.menu-icon {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    font-size: 14px;
+    color: #050309;
+    cursor: pointer;
+}
+
+
+.card-header h1 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+
+
+
+.card-section {
+    border-top: 1px solid #0a020b; 
+    padding: 25px 0;
+}
+
+.card-section.no-border {
+    border-bottom: none;
+    padding-bottom: 10px;
+}
+
+
+.card-section h2 {
+    color: #5a1f74; 
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.card-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0;
+    color: #120404;
+}
+
+
+mark {
+    background-color: #f5ed59; 
+    color: inherit;
+    padding: 0 2px;
+}
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.abbr-text {
+    border: 1px solid #b76d18;
+    padding: 1px 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.tooltip-box {
+    visibility: visible; 
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 11px;
+    position: absolute;
+    z-index: 1;
+    bottom: -32px; 
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+
+.quote-block {
+    border-left: 2px solid #D97D3E; 
+    display: inline-block;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 14px;
+    margin: 0 0 5px 0 ;
+    color: #555;
+}
+
+.quote-author {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
+</style>

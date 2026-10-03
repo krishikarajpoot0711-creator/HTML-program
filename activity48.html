@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jungle Carousel & Scrollspy</title>
+
+    <link rel="stylesheet" href="https://jsdelivr.net">
+    
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body data-spy="scroll" data-target="#jungleNav" data-offset="60">
+
+    
+    <nav id="jungleNav" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Jungle Explore</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#rainforest">Rainforest</a></li>
+                <li class="nav-item"><a class="nav-link" href="#river">River</a></li>
+                <li class="nav-item"><a class="nav-link" href="#night">Night</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    
+    <div id="jungleCarousel" class="carousel slide" data-ride="carousel">
+        
+        <ol class="carousel-indicators">
+            <li data-target="#jungleCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#jungleCarousel" data-slide-to="1"></li>
+            <li data-target="#jungleCarousel" data-slide-to="2"></li>
+        </ol>
+
+       
+        <div class="carousel-inner">
+            <div class="carousel-item active jungle-slide rainforest-slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Rainforest</h5>
+                    <p>Deep in the lush green canopy.</p>
+                </div>
+            </div>
+            <div class="carousel-item jungle-slide river-slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The River</h5>
+                    <p>Winding through the heart of the jungle.</p>
+                </div>
+            </div>
+            <div class="carousel-item jungle-slide night-slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Night</h5>
+                    <p>Where the nocturnal wildlife awakens.</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <a class="carousel-control-prev" href="#jungleCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#jungleCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    
+    <section id="rainforest" class="section bg-rainforest">
+        <div class="container">
+            <h2>Rainforest Exploration</h2>
+            <p>Welcome to the dense, vibrant layer of the jungle.</p>
+        </div>
+    </section>
+
+    <section id="river" class="section bg-river">
+        <div class="container">
+            <h2>River Journey</h2>
+            <p>Discover the aquatic ecosystems flowing through the terrain.</p>
+        </div>
+    </section>
+
+    <section id="night" class="section bg-night">
+        <div class="container">
+            <h2>Night Safari</h2>
+            <p>Experience the mysterious sounds and creatures of the dark.</p>
+        </div>
+    </section>
+
+    
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+
+
+<style>
+.jungle-slide {
+    height: 60vh;
+    text-align: center;
+    color: #ffffff;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.rainforest-slide {
+    background-color: #2e7d32;
+}
+
+.river-slide {
+    background-color: #0277bd;
+}
+
+.night-slide {
+    background-color: #37474f;
+}
+
+
+.section {
+    padding: 100px 0;
+    min-height: 80vh;
+}
+
+.bg-rainforest {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.bg-river {
+    background-color: #e1f5fe;
+    color: #01579b;
+}
+
+.bg-night {
+    background-color: #eceff1;
+    color: #263238;
+}
+
+</style>
+
+</body>
+</html>

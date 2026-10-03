@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Person Profile</title>
+  
+  <link href="https://jsdelivr.net" rel="stylesheet">
+  
+  <style>
+    
+    body {
+      background-color: #f8f9fa;
+      padding: 30px;
+    }
+    .profile-card {
+      max-width: 400px;
+      margin: 0 auto 30px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .code-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    pre {
+      background-color: #212529;
+      color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="card profile-card text-center">
+      <div class="card-header bg-primary text-white">
+        <h3>Profile Card</h3>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title" id="personName"></h4>
+        <p class="card-text text-muted" id="personRelationship"></p>
+        <hr>
+        <p class="card-text"><strong>Favorite Activity:</strong> <span id="personActivity"></span></p>
+        <p class="card-text"><strong>City:</strong> <span id="personCity"></span></p>
+      </div>
+    </div>
+
+    
+    <div class="code-container">
+      <h5 class="text-secondary">JavaScript Object Used:</h5>
+      <pre><code id="codeDisplay"></code></pre>
+    </div>
+  </div>
+
+  
+  <script>
+   
+    const favouritePerson = {
+      name: "Neha Saranya",
+      relationship: "Best Friend",
+      activity: "Cooking and Designing",
+      city: "Nigeria",
+    };
+
+    
+    document.getElementById("personName").textContent = favouritePerson.name;
+    document.getElementById("personRelationship").textContent = favouritePerson.relationship;
+
+   
+    document.getElementById("personActivity").textContent = favouritePerson["activity"];
+    document.getElementById("personCity").textContent = favouritePerson["city"];
+
+  
+    document.getElementById("codeDisplay").textContent = JSON.stringify(favouritePerson, null, 2);
+  </script>
+
+</body>
+</html>

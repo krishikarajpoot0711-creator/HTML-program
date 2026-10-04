@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Zoo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4abe78;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #ff5733;
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        
+        .zoo-box {
+            background-color: #7be07b;
+            border: 3px solid #d35400;
+            border-radius: 12px;
+            width: 380px;
+            margin: 0 auto 20px auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .cage-div {
+            background-color: #a3f1a3;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        
+        .total-div {
+            background-color: #a3f1a3;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        
+        .open-btn {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .open-btn:hover {
+            background-color: #e04e2a;
+        }
+
+        
+        .status-message {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Zoo</h1>
+    <p>The Most Friendly Animals!</p>
+
+    
+    <div class="zoo-box">
+        
+        <div id="cages-container"></div>
+        
+       
+        <div class="total-div" id="total-display">Total Animals: 0</div>
+    </div>
+
+
+    <button class="open-btn" id="zoo-btn">Click Me!</button>
+    <div class="status-message" id="status-text"></div>
+
+    <script>
+        
+         animals = ["Koala", "Elephant", "Penguin"];
+
+        
+         cagesContainer = document.getElementById("cages-container");
+      totalDisplay = document.getElementById("total-display");
+         zooBtn = document.getElementById("zoo-btn");
+       statusText = document.getElementById("status-text");
+
+     
+        function buildZoo() {
+            
+        
+
+            
+            animals.forEach((animal, index) => {
+             newCage = document.createElement("div");
+                newCage.className = "cage-div";
+                newCage.textContent = `Zone ${index + 1}: ${animal}`;
+                cagesContainer.appendChild(newCage);
+            });
+
+            totalDisplay.textContent = `Total Animals: ${animals.length}`;
+        }
+
+       
+        zooBtn.addEventListener("click", () => {
+            statusText.textContent = "My Zoo is now open!";
+        });
+
+  
+        buildZoo();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Profile</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f6ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .profile-container {
+            width: 360px;
+            background-color: #f0f6ff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #000080;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .show-btn {
+            background-color: #000080;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .show-btn:hover {
+            background-color: #000066;
+        }
+
+        .profile-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-box {
+            background-color: white;
+            border: 1.5px solid #000080;
+            border-radius: 8px;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <h1>My Game Profile</h1>
+        
+        
+        <button class="show-btn" onclick="displayProfile()">Show Profile</button>
+
+        
+        <div id="profileBox" class="profile-fields hidden">
+            <div class="info-box">Name: <span id="pName"></span></div>
+            <div class="info-box">Score: <span id="pScore"></span></div>
+            <div class="info-box">Top Score: <span id="pTopScore"></span></div>
+            <div class="info-box">Rank: <span id="pRank"></span></div>
+            <div class="info-box">Greeting: <span id="pGreeting"></span></div>
+            <div class="info-box">Stars: <span id="pStars"></span></div>
+            <div class="info-box">Bonus Level: <span id="pBonus"></span></div>
+            <div class="info-box">Team Name: <span id="pTeam"></span></div>
+        </div>
+    </div>
+
+    <script>
+        
+        const profileData = {
+            name: "Alex",
+            score: "75 out of 100",
+            topScore: false,
+            rank: "Silver",
+            greeting: "Good Afternoon!",
+            stars: "*****",
+            bonusLevel: "",
+            teamName: undefined
+        };
+
+       
+        function displayProfile() {
+            
+            
+            document.getElementById("pName").textContent = profileData.name;
+            document.getElementById("pScore").textContent = profileData.score;
+            document.getElementById("pTopScore").textContent = profileData.topScore;
+            document.getElementById("pRank").textContent = profileData.rank;
+            document.getElementById("pGreeting").textContent = profileData.greeting;
+            document.getElementById("pStars").textContent = profileData.stars;
+            document.getElementById("pBonus").textContent = profileData.bonusLevel;
+            document.getElementById("pTeam").textContent = profileData.teamName;
+
+            
+            const profileBox = document.getElementById("profileBox");
+            profileBox.classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>

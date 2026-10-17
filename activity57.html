@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Planet Cards</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f6fc;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+
+        h1 {
+            color: #f15a31;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        
+        #show-btn {
+            background-color: #f15a31;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.2s ease;
+            margin-bottom: 40px;
+        }
+
+        #show-btn:hover {
+            background-color: #d44820;
+        }
+
+        
+        #card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        
+        .planet-card {
+            background-color: white;
+            border: 2px solid #f15a31;
+            border-radius: 12px;
+            padding: 20px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .planet-card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+            color: #222;
+        }
+
+        .planet-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>My Planet Cards</h1>
+        <p>Use a aJavaScript class to build planet cards!</p>
+        <button onclick="showPlanets()">Show Planets!</button>
+        <div class="cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+        </div>
+        <script>
+            class Planet {
+                constructor(name, fact){
+                    this.name = name;
+                    this.fact = fact;
+                }
+                describe() {
+                    return this.name + ": " + this.fact;
+                }
+            }
+
+        function showPlanets(){
+    let p1 = new Planet("Earth", "The only planet with life");
+    let p2 = new Planet("Mars","Known as the Red Planet"); 
+    let p3 = new Planet("Saturn", " Has rings made of ice"); 
+
+    
+    document.getElementById("card1").innerHTML = 
+        "<div class='card'><div class='planet-name'>" + p1.name + "</div>" +
+        "<div class='planet-fact'>" + p1.describe() + "</div></div>";
+
+    document.getElementById("card2").innerHTML = 
+        "<div class='card'><div class='planet-name'>" + p2.name + "</div>" +
+        "<div class='planet-fact'>" + p2.describe() + "</div></div>";
+
+    document.getElementById("card3").innerHTML = 
+        "<div class='card'><div class='planet-name'>" + p3.name + "</div>" +
+        "<div class='planet-fact'>" + p3.describe() + "</div></div>";
+}
+
+
+
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Dashboard</title>
+    
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        .result-box {
+            background-color: #e9ecef;
+            border-left: 5px solid #0d6efd;
+            padding: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            border-radius: 4px;
+            min-height: 44px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-5">JavaScript Fundamentals</h1>
+    
+    <div class="row g-4">
+        
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Data Type Checker</h5>
+                    <p class="card-text text-muted">Checks the data types of a name, score, and boolean value using <code>typeof</code>.</p>
+                    <button class="btn btn-primary mb-3" onclick="checkTypes()">Check Types</button>
+                    <div id="typeCheckerResult" class="result-box">Results will appear here...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Data Type Converter</h5>
+                    <p class="card-text text-muted">Converts "88" into a number and 12 into text using <code>Number()</code> and <code>String()</code>.</p>
+                    <button class="btn btn-primary mb-3" onclick="convertTypes()">Convert Data</button>
+                    <div id="converterResult" class="result-box">Results will appear here...</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Text Fixer (Search & Replace)</h5>
+                    <p class="card-text text-muted">Replaces the first word "maths" with "coding" in a sentence using <code>replace()</code>.</p>
+                    <button class="btn btn-primary mb-3" onclick="replaceText()">Replace Text</button>
+                    <div id="replaceResult" class="result-box">Results will appear here...</div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Error Catcher</h5>
+                    <p class="card-text text-muted">Triggers an intentional error using an undefined variable inside a <code>try/catch</code> block.</p>
+                    <button class="btn btn-primary mb-3" onclick="handleError()">Trigger Error</button>
+                    <div id="errorResult" class="result-box" style="border-left-color: #dc3545;">Results will appear here...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    
+    function checkTypes() {
+        const name = "Alice";
+        const score = 95;
+        const isPassed = true;
+
+        const typeName = typeof name;
+        const typeScore = typeof score;
+        const typeIsPassed = typeof isPassed;
+
+        document.getElementById('typeCheckerResult').innerHTML = 
+            `Name ("${name}"): <strong>${typeName}</strong><br>` +
+            `Score (${score}): <strong>${typeScore}</strong><br>` +
+            `Passed (${isPassed}): <strong>${typeIsPassed}</strong>`;
+    }
+
+
+    function convertTypes() {
+        const originalString = "88";
+        const originalNumber = 12;
+
+        const convertedNumber = Number(originalString);
+        const convertedString = String(originalNumber);
+
+        document.getElementById('converterResult').innerHTML = 
+            `Original: "${originalString}" (${typeof originalString}) -> Converted: <strong>${convertedNumber}</strong> (${typeof convertedNumber})<br>` +
+            `Original: ${originalNumber} (${typeof originalNumber}) -> Converted: <strong>"${convertedString}"</strong> (${typeof convertedString})`;
+    }
+
+    
+    function replaceText() {
+        const originalSentence = "maths is my favorite subject to learn online.";
+        const modifiedSentence = originalSentence.replace("maths", "coding");
+
+        document.getElementById('replaceResult').innerHTML = 
+            `Original: <em>"${originalSentence}"</em><br>` +
+            `Changed: <strong>"${modifiedSentence}"</strong>`;
+    }
+
+    
+    function handleError() {
+        try {
+            
+            console.log(undefinedVariable);
+        } catch (error) {
+            document.getElementById('errorResult').innerHTML = 
+                `<strong>Error caught successfully!</strong><br>` +
+                `Message: <span class="text-danger">${error.message}</span>`;
+        }
+    }
+</script>
+
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>

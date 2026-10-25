@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+
+  <link href="https://jsdelivr.net" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+
+  <div class="container">
+    <h1 class="text-center mb-5">Daily Task Manager</h1>
+
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Daily Tasks</h5>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-primary" onclick="sortAZ()">Sort A to Z</button>
+              <button class="btn btn-secondary" onclick="sortZA()">Sort Z to A</button>
+            </div>
+            <div id="tasks-display" class="p-3 bg-white border rounded"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-4">Task Durations</h5>
+            <div class="d-flex gap-2 mb-3">
+              <button class="btn btn-success" onclick="sortShortest()">Shortest First</button>
+              <button class="btn btn-warning text-white" onclick="sortLongest()">Longest First</button>
+              <button class="btn btn-info text-white" onclick="applyMap()">Add Labels (map)</button>
+            </div>
+            <div id="times-display" class="p-3 bg-white border rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+   
+    let tasks = ["Exercise", "Read a Book", "Code", "Answer Emails", "Cook Dinner"];
+    const tasksDisplay = document.getElementById("tasks-display");
+
+    function displayTasks() {
+      tasksDisplay.innerHTML = `<ul class="list-group list-group-flush">${tasks.map(task => `<li class="list-group-item">${task}</li>`).join('')}</ul>`;
+    }
+
+    
+    let minutes =;
+    const timesDisplay = document.getElementById("times-display");
+
+    function displayTimes(arrayToDisplay) {
+      timesDisplay.innerHTML = `<ul class="list-group list-group-flush">${arrayToDisplay.map(time => `<li class="list-group-item">${time}</li>`).join('')}</ul>`;
+    }
+
+    
+    function sortAZ() {
+      tasks.sort();
+      displayTasks();
+    }
+
+    function sortZA() {
+      tasks.sort();
+      tasks.reverse();
+      displayTasks();
+    }
+
+
+    function sortShortest() {
+      minutes.sort((a, b) => a - b);
+      displayTimes(minutes);
+    }
+
+    function sortLongest() {
+      minutes.sort((a, b) => b - a);
+      displayTimes(minutes);
+    }
+
+    
+    function applyMap() {
+      let labelledMinutes = minutes.map(time => time + " minutes");
+      displayTimes(labelledMinutes);
+    }
+
+
+    window.onload = function() {
+      displayTasks();
+      displayTimes(minutes);
+    };
+  </script>
+</body>
+</html>

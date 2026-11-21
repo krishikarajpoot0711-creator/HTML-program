@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+            font-family: Arial, sans-serif;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 900px;
+            min-height: 460px;
+            background-color: #30334f;
+            display: flex;
+            align-items: center;
+            padding: 45px;
+            gap: 40px;
+            color: white;
+        }
+
+    
+
+        .left {
+            width: 50%;
+            height: 350px;
+            position: relative;
+        }
+
+        
+
+        .person {
+            position: absolute;
+            left: 35px;
+            top: 30px;
+            z-index: 2;
+        }
+
+        .head {
+            width: 35px;
+            height: 42px;
+            background: #f5a5a5;
+            border-radius: 45%;
+            position: absolute;
+            left: 35px;
+            top: 0;
+        }
+
+        .hair {
+            width: 38px;
+            height: 20px;
+            background: #202337;
+            border-radius: 50% 50% 20% 20%;
+            position: absolute;
+            top: -7px;
+            left: 33px;
+        }
+
+        .body {
+            width: 65px;
+            height: 105px;
+            background: #22263a;
+            position: absolute;
+            top: 38px;
+            left: 20px;
+            border-radius: 15px 15px 5px 5px;
+        }
+
+        .shirt {
+            width: 18px;
+            height: 95px;
+            background: #ffb51b;
+            position: absolute;
+            left: 43px;
+            top: 43px;
+            z-index: 2;
+        }
+
+        .leg {
+            width: 25px;
+            height: 95px;
+            background: #202337;
+            position: absolute;
+            top: 130px;
+            left: 25px;
+            transform: rotate(-8deg);
+            border-radius: 10px;
+        }
+
+        .leg2 {
+            width: 25px;
+            height: 90px;
+            background: #202337;
+            position: absolute;
+            top: 130px;
+            left: 65px;
+            transform: rotate(-15deg);
+            border-radius: 10px;
+        }
+
+    
+
+        .desk {
+            position: absolute;
+            width: 310px;
+            height: 15px;
+            background: #e5e7e8;
+            top: 175px;
+            left: 75px;
+        }
+
+        .drawer {
+            position: absolute;
+            width: 65px;
+            height: 135px;
+            background: #e5e7e8;
+            top: 190px;
+        }
+
+        .drawer.left-drawer {
+            left: 85px;
+        }
+
+        .drawer.right-drawer {
+            left: 320px;
+        }
+
+        .drawer div {
+            height: 3px;
+            width: 30px;
+            background: #30334f;
+            margin: 25px auto;
+        }
+
+        
+
+        .monitor {
+            position: absolute;
+            width: 125px;
+            height: 85px;
+            background: #f5f5f5;
+            border: 5px solid #c9cbd0;
+            top: 45px;
+            left: 180px;
+            z-index: 3;
+        }
+
+        .monitor::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 25px;
+            background: #bfc1c8;
+            top: 75px;
+            left: 53px;
+        }
+
+        .screen-lines {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            width: 85px;
+            height: 35px;
+            background: repeating-linear-gradient(
+                0deg,
+                #f5ad29 0px,
+                #f5ad29 3px,
+                transparent 3px,
+                transparent 9px
+            );
+        }
+
+        
+
+        .right {
+            width: 50%;
+        }
+
+        .small-heading {
+            color: #ffc42e;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 29px;
+            margin-bottom: 12px;
+        }
+
+        .highlight {
+            color: #ffc42e;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #e0e0e5;
+            margin-bottom: 18px;
+        }
+
+        .learn-btn {
+            background: transparent;
+            border: 1px solid #ffc42e;
+            color: #ffc42e;
+            padding: 9px 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .learn-btn:hover {
+            background: #ffc42e;
+            color: #30334f;
+        }
+
+        #moreText {
+            display: none;
+        }
+
+        .logo {
+            position: absolute;
+            top: 35px;
+            right: 35px;
+            color: white;
+            font-size: 25px;
+        }
+
+        
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .left {
+                transform: scale(0.85);
+                transform-origin: left top;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">▼</div>
+
+
+
+        <div class="left">
+
+            <div class="person">
+                <div class="hair"></div>
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="shirt"></div>
+                <div class="leg"></div>
+                <div class="leg2"></div>
+            </div>
+
+            <div class="monitor">
+                <div class="screen-lines"></div>
+            </div>
+
+            <div class="desk"></div>
+
+            <div class="drawer left-drawer">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="drawer right-drawer">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+
+    
+
+        <div class="right">
+
+            <div class="small-heading">About Me</div>
+
+            <h1>A Little Bit About Me</h1>
+
+            <p>
+                <span class="highlight">Hello!</span>
+                My name is Krishika. I am a creative and passionate person who loves
+                learning new things. I enjoy exploring technology,
+                designing websites and improving my skills.
+            </p>
+
+            <p>
+                I believe that creativity and hard work are the keys
+                to success. My goal is to learn something new every
+                day and turn my ideas into reality.
+            </p>
+
+            <p id="moreText">
+                I am always excited to explore new opportunities,
+                work on interesting projects and develop my knowledge.
+            </p>
+
+            <button class="learn-btn" onclick="learnMore()">
+                Learn More
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+        function learnMore() {
+            let text = document.getElementById("moreText");
+            let button = document.querySelector(".learn-btn");
+
+            if (text.style.display === "block") {
+                text.style.display = "none";
+                button.innerText = "Learn More";
+            } else {
+                text.style.display = "block";
+                button.innerText = "Show Less";
+            }
+        }
+    </script>
+
+</body>
+</html>
